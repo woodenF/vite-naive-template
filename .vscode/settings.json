@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // eslint格式化匹配文件
+  "eslint.validate": ["javascript", "vue", "typescript"]
+}
