@@ -4,3 +4,4 @@
 - [x] 集成 EditorConfig
 - [x] 集成 husky 和 lint-staged
 - [x] 集成 commitlint
+- [x] 集成 vite-plugin-svg-icons 添加对 SVG 图标的支持
