@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NxSvg from './components/Svg/index.vue';
+import NxSvg from '@/components/Svg/inde.vue';
 </script>
 
 <template>

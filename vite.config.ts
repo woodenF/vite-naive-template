@@ -11,5 +11,10 @@ export default defineConfig({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svgs')],
       symbolId: 'icon-[dir]-[name]'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  }
 });
