@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import NxSvg from '@/components/Svg/inde.vue';
+const test = ref('test');
 </script>
 
 <template>
   <div>
-    123
-    <NxSvg
-      name="guide"
-    />
+    <Icon name="code" />
+    {{ test }}
   </div>
 </template>
