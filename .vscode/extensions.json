@@ -2,6 +2,7 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "shd101wyy.markdown-preview-enhanced"
+    "shd101wyy.markdown-preview-enhanced",
+    "editorconfig.editorconfig"
   ]
 }
