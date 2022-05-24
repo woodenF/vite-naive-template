@@ -2,6 +2,6 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "shd101wyy.markdown-preview-enhanced"
   ]
 }
