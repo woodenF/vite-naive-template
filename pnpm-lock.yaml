@@ -18,6 +18,7 @@ specifiers:
   husky: ^7.0.0
   lint-staged: ^12.4.1
   naive-ui: ^2.29.0
+  pinia: ^2.0.14
   postcss: ^8.4.14
   prettier: ^2.6.2
   tailwindcss: ^3.0.24
@@ -32,6 +33,7 @@ specifiers:
   vue-tsc: ^0.34.7
 
 dependencies:
+  pinia: 2.0.14_3qif72e3bpvbqxqkytcvw4yi4u
   vue: 3.2.34
   vue-router: 4.0.15_vue@3.2.34
 
@@ -3222,6 +3224,24 @@ packages:
     hasBin: true
     dev: true
 
+  /pinia/2.0.14_3qif72e3bpvbqxqkytcvw4yi4u:
+    resolution: {integrity: sha512-0nPuZR4TetT/WcLN+feMSjWJku3SQU7dBbXC6uw+R6FLQJCsg+/0pzXyD82T1FmAYe0lsx+jnEDQ1BLgkRKlxA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      typescript: 4.6.4
+      vue: 3.2.34
+      vue-demi: 0.12.5_vue@3.2.34
+    dev: false
+
   /pkg-types/0.3.2:
     resolution: {integrity: sha512-eBYzX/7NYsQEOR2alWY4rnQB49G62oHzFpoi9Som56aUr8vB8UGcmcIia9v8fpBeuhH3Ltentuk2OGpp4IQV3Q==}
     dependencies:
@@ -4319,7 +4339,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.34
-    dev: true
 
   /vue-eslint-parser/9.0.2_eslint@8.15.0:
     resolution: {integrity: sha512-uCPQwTGjOtAYrwnU+76pYxalhjsh7iFBsHwBqDHiOPTxtICDaraO4Szw54WFTNZTAEsgHHzqFOu1mmnBOBRzDA==}

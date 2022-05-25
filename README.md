@@ -8,3 +8,4 @@
 - [x] 集成 unplugin-vue-component unplugin-auto-import
 - [x] 集成 VueRouter
 - [x] 集成 tailwind naive ui
+- [x] 集成 pinia
