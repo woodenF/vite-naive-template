@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="Layout">
 import { useDialog, useLoadingBar, useMessage, useNotification } from 'naive-ui';
 import Content from './components/content.vue';
 import Header from './components/header.vue';

@@ -6,6 +6,6 @@ const test = ref('13');
 
 <template>
   <div>
-    <NInput v-model:value="test" />
+    <input>
   </div>
 </template>

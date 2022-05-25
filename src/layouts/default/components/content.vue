@@ -23,7 +23,7 @@ const includeList = computed(() => {
             mode="out-in"
             appear
           >
-            <KeepAlive :include="includeList">
+            <KeepAlive :include="['BlankLayout', ...includeList]">
               <Component
                 :is="Component"
                 :key="route.name"

@@ -19,7 +19,7 @@ const { el, onScroll } = useHorizontalScroll();
     :class="[appStore.collapsed ? 'left-sidebar--collapsed' : 'left-sidebar']"
     @mousewheel="onScroll"
   >
-    <tab-item
+    <TabItem
       v-for="(item, index) in tabStore.tabs"
       :key="item.path"
       :is-active="route.path === item.path"
@@ -27,14 +27,14 @@ const { el, onScroll } = useHorizontalScroll();
       @close="tabStore.removeTab(item, router)"
       @click="router.push(item)"
     >
-      <n-icon
+      <NIcon
         size="16"
         class="mr-[8px]"
       >
         <component :is="item.meta?.icon" />
-      </n-icon>
+      </NIcon>
       {{ item.meta.title }}
-    </tab-item>
+    </TabItem>
   </div>
 </template>
 <style lang="scss" scoped>

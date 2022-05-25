@@ -14,3 +14,4 @@
 - [x] 根据动态路由渲染菜单
 - [x] 引入 vite-plugin-vue-setup-extend 添加 KeepAlive 添加路由过渡动画
 - [x] 添加侧边菜单打开外链的支持
+- [x] 添加多级菜单的支持

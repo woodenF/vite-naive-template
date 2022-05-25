@@ -28,7 +28,7 @@ const { bool: isHover, setBool } = useBoolean(false);
     @mouseleave="setBool(false)"
   >
     <div class="absolute w-full h-full bottom-0 left-0 -z-10">
-      <svg-radius-bg
+      <SvgRadiusBg
         :is-active="props.isActive"
         :is-hover="isHover"
         :primary-color="themeVars.primaryColor"
@@ -46,9 +46,10 @@ const { bool: isHover, setBool } = useBoolean(false);
       class="transition-all duration-300 text-[0px] ml-normal w-[16px] h-[16px] flex items-center justify-center hover:bg-primary-hover rounded-full mt-[2px] text-zinc-600"
       @click.stop="emit('close')"
     >
-      <n-icon size="12">
-        <Icon name="tab_close" />
-      </n-icon>
+      <Icon
+        name="tab_close"
+        size="12"
+      />
     </div>
   </div>
 </template>
