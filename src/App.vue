@@ -3,8 +3,5 @@ const test = ref('test');
 </script>
 
 <template>
-  <div>
-    <Icon name="code" />
-    {{ test }}
-  </div>
+  <RouterView />
 </template>
