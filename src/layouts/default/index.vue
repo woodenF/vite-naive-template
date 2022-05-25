@@ -3,6 +3,7 @@ import { useDialog, useLoadingBar, useMessage, useNotification } from 'naive-ui'
 import Content from './components/content.vue';
 import Header from './components/header.vue';
 import Sidebar from './components/sidebar.vue';
+import Tabs from './components/tab/index.vue';
 
 function registerNaiveTools() {
   window.$loadingBar = useLoadingBar();
@@ -18,6 +19,7 @@ registerNaiveTools();
   <div class="h-screen">
     <Sidebar />
     <Header />
+    <Tabs />
     <Content />
   </div>
 </template>

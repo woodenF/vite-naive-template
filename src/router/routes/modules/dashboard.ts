@@ -19,7 +19,7 @@ const dashboard: AppRouteRecordRaw = {
       component: () => import('@/views/dashboard/analysis/index.vue'),
       meta: {
         title: '分析页',
-        icon: h(Icon, { name: 'dashboard' })
+        icon: h(Icon, { name: 'analysis' })
       }
     },
     {
@@ -28,7 +28,7 @@ const dashboard: AppRouteRecordRaw = {
       component: () => import('@/views/dashboard/workbench/index.vue'),
       meta: {
         title: '工作台',
-        icon: h(Icon, { name: 'dashboard' })
+        icon: h(Icon, { name: 'workbench' })
       }
     }
   ]

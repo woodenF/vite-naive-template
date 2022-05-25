@@ -1,7 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup name="DashboardWorkbench">
+
+const test = ref('13');
+
+</script>
 
 <template>
   <div>
-    workbench
+    <NInput v-model:value="test" />
   </div>
 </template>

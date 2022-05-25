@@ -12,3 +12,4 @@
 - [x] 搭建项目基础样式结构
 - [x] 模拟权限控制，动态路由生成
 - [x] 根据动态路由渲染菜单
+- [x] 引入 vite-plugin-vue-setup-extend 添加 KeepAlive 添加路由过渡动画

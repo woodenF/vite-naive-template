@@ -5,6 +5,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,7 +26,8 @@ export default defineConfig({
     AutoImport({
       imports: ['vue'],
       dts: 'src/auto-import.d.ts'
-    })
+    }),
+    VueSetupExtend()
   ],
   resolve: {
     alias: {

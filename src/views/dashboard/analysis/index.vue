@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="DashboardAnalysis">
 window.$message?.success('123');
 </script>
 <template>
