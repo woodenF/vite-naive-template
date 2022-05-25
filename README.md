@@ -9,3 +9,4 @@
 - [x] 集成 VueRouter
 - [x] 集成 tailwind naive ui
 - [x] 集成 pinia
+- [x] 搭建项目基础样式结构
