@@ -4,6 +4,7 @@ import * as path from 'path';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,9 @@ export default defineConfig({
     Components({
       dirs: ['src/components'],
       extensions: ['vue'],
+      resolvers: [
+        NaiveUiResolver()
+      ],
       dts: 'src/components.d.ts'
     }),
     AutoImport({

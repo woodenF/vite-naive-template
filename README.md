@@ -7,3 +7,4 @@
 - [x] 集成 vite-plugin-svg-icons 添加对 SVG 图标的支持
 - [x] 集成 unplugin-vue-component unplugin-auto-import
 - [x] 集成 VueRouter
+- [x] 集成 tailwind naive ui

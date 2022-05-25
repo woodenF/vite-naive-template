@@ -1,7 +1,8 @@
-<script lang="ts" setup></script>
-
+<script lang="ts" setup>
+window.$message?.success('123');
+</script>
 <template>
   <div>
-    analysis
+    <NButton>测试</NButton>
   </div>
 </template>

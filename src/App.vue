@@ -1,7 +1,24 @@
 <script setup lang="ts">
-const test = ref('test');
+import { zhCN, dateZhCN } from 'naive-ui';
 </script>
 
 <template>
-  <RouterView />
+  <NConfigProvider
+    :locale="zhCN"
+    :date-locale="dateZhCN"
+  >
+    <NEl
+      tag="div"
+    >
+      <NLoadingBarProvider>
+        <NDialogProvider>
+          <NNotificationProvider>
+            <NMessageProvider>
+              <RouterView />
+            </NMessageProvider>
+          </NNotificationProvider>
+        </NDialogProvider>
+      </NLoadingBarProvider>
+    </NEl>
+  </NConfigProvider>
 </template>

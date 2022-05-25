@@ -3,6 +3,7 @@
     "Vue.volar",
     "dbaeumer.vscode-eslint",
     "shd101wyy.markdown-preview-enhanced",
-    "editorconfig.editorconfig"
+    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss"
   ]
 }

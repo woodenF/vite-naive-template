@@ -2,6 +2,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   // eslint格式化匹配文件
   "eslint.validate": ["javascript", "vue", "typescript"]
 }
