@@ -10,3 +10,4 @@
 - [x] 集成 tailwind naive ui
 - [x] 集成 pinia
 - [x] 搭建项目基础样式结构
+- [x] 模拟权限控制，动态路由生成
