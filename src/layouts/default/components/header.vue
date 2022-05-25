@@ -6,11 +6,13 @@ const appStore = useAppStore();
 </script>
 <template>
   <div
-    class="fixed top-0 h-header right-0 transition-all duration-300 bg-fuchsia-100 flex justify-between"
+    class="fixed top-0 h-header right-0 transition-all duration-300 flex justify-between shadow-sm"
     :class="[appStore.collapsed ? 'left-sidebar--collapsed' : 'left-sidebar']"
-    @click="appStore.toggleCollapsed"
   >
-    <div class="h-full flex items-center px-small hover:bg-gray-200 hover:text-primary">
+    <div
+      class="h-full flex items-center px-small hover:bg-gray-200 hover:text-primary"
+      @click="appStore.toggleCollapsed"
+    >
       <Icon
         size="20"
         :name=" appStore.collapsed ? 'open' : 'close' "

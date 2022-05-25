@@ -34,7 +34,7 @@ module.exports = {
         // 展开状态下的 sidebar 宽度
         sidebar: '220px',
         // 折叠状态下的 sidebar 宽度
-        'sidebar--collapsed': '48px',
+        'sidebar--collapsed': '56px',
         // header 高度
         header: '48px',
         // tab 高度

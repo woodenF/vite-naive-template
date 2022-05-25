@@ -1,5 +1,8 @@
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw, RouterLink } from 'vue-router';
 import { cloneDeep } from 'lodash-es';
+import { AppRouteRecordRaw } from '@/types/router';
+import { NIcon } from 'naive-ui';
+import { Component } from 'vue';
 
 export function filterAsyncRoutes(routes: RouteRecordRaw[], permList: string[], prefix = ''): RouteRecordRaw[] {
   const res: RouteRecordRaw[] = [];
@@ -16,4 +19,20 @@ export function filterAsyncRoutes(routes: RouteRecordRaw[], permList: string[], 
     }
   });
   return res;
+}
+
+export function renderMenuLabel(route: AppRouteRecordRaw) {
+  return h(
+    RouterLink,
+    {
+      to: {
+        name: route.children ? '' : route.name
+      }
+    },
+    { default: () => route.meta.title }
+  );
+}
+
+export function renderIcon(route: AppRouteRecordRaw) {
+  return h(NIcon, null, { default: () => h(route.meta.icon as Component) });
 }
