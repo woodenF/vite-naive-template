@@ -16,7 +16,7 @@ const includeList = computed(() => {
     :class="[appStore.collapsed ? 'left-sidebar--collapsed' : 'left-sidebar']"
   >
     <NScrollbar>
-      <div class="p-normal">
+      <div class="p-normal h-[calc(100vh-92px)]">
         <RouterView v-slot="{ Component, route }">
           <Transition
             name="fade"
@@ -35,3 +35,5 @@ const includeList = computed(() => {
     </NScrollbar>
   </div>
 </template>
+<style lang="scss">
+</style>

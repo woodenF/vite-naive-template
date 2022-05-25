@@ -22,6 +22,16 @@ export function filterAsyncRoutes(routes: RouteRecordRaw[], permList: string[], 
 }
 
 export function renderMenuLabel(route: AppRouteRecordRaw) {
+  if(route.meta.url) {
+    return h(
+      'a',
+      {
+        href: route.meta.url,
+        target: '_black'
+      },
+      { default: () => route.meta.title }
+    );
+  }
   return h(
     RouterLink,
     {

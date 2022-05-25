@@ -13,6 +13,7 @@ declare module 'vue-router' {
   interface RouteMeta {
     title: string;
     noPerm?: boolean;
-    icon?: Component
+    icon?: Component;
+    url?: string;
   }
 }
