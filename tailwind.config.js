@@ -1,6 +1,16 @@
 module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   content: [],
+  safelist: [
+    'from-[#ec4786]',
+    'to-[#b955a4]',
+    'from-[#865ec0]',
+    'to-[#5144b4]',
+    'from-[#56cdf3]',
+    'to-[#719de3]',
+    'from-[#fcbc25]',
+    'to-[#f68057]'
+  ],
   theme: {
     extend: {
       colors: {
@@ -48,6 +58,13 @@ module.exports = {
         normal: ['16px', '24px'],
         medium: ['24px', '32px'],
         large: ['28px', '36px']
+      },
+      borderRadius: {
+        mini: '8px',
+        small: '12px',
+        normal: '16px',
+        medium: '20px',
+        large: '24px'
       }
     }
   },
