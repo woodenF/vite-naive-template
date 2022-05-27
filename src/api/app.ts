@@ -1,12 +1,8 @@
-export function getAsyncRoutes(): Promise<string[]> {
-  return new Promise((resolve, reject) => {
-    const permList = [
-      '/dashboard',
-      '/dashboard/analysis',
-      '/dashboard/workbench'
-    ];
-    setTimeout(() => {
-      resolve(permList);
-    }, 1000);
+import { request } from '@/http/axios';
+import { ILoginReturn } from '@/interface/app';
+
+export function onLogin() {
+  return request<ILoginReturn>({
+    url: '/login'
   });
 }

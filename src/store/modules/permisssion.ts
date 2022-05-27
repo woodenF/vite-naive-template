@@ -1,4 +1,4 @@
-import { getAsyncRoutes } from '@/api/app';
+import { onLogin } from '@/api/app';
 import { filterAsyncRoutes } from '@/helper/router';
 import { asyncRoutes } from '@/router/routes';
 import { defineStore } from 'pinia';
@@ -14,9 +14,8 @@ export const usePermissionStore = defineStore('permission', () => {
   });
 
   async function generateRoutes() {
-    const permList = await getAsyncRoutes();
+    const { data: { data: { permList = [] } = {} } } = await onLogin().instance;
     store.authRoutes = filterAsyncRoutes(asyncRoutes, permList);
-    console.log('generateRoutes', store.authRoutes);
   }
 
   return {
