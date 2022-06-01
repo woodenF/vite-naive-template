@@ -1,5 +1,7 @@
 # Vite-Naive-Template
 
+本项目做的效果借鉴于`soybean-admin`，除部分小东西copy,如`tab`的`svg`，主要是找不到,首页的展示效果模仿，其余均按照个人思路实现。
+
 - [x] 配置 Eslint 规则
 - [x] 集成 EditorConfig
 - [x] 集成 husky 和 lint-staged
