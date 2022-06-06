@@ -7,11 +7,17 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 import { viteMockServe } from 'vite-plugin-mock';
+import Markdown from 'vite-plugin-md';
+import copy from 'rollup-plugin-copy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/]
+    }),
+    Markdown(),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svgs')],
       symbolId: 'icon-[dir]-[name]'
@@ -38,6 +44,18 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
+    }
+  },
+  build: {
+    rollupOptions: {
+      plugins: [
+        copy({
+          hook: 'closeBundle',
+          targets: [
+            { src: './src/docs', dest: 'dist' }
+          ]
+        })
+      ]
     }
   }
 });

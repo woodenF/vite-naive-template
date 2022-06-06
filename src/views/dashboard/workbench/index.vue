@@ -77,5 +77,9 @@ const { run: queryRun, querise } = useRequest<ITest, [number]>(getTestById, {
         </NButton>
       </NButtonGroup>
     </NSpace>
+    <DemoPreview
+      comp-name="Input"
+      demo-name="basic"
+    />
   </div>
 </template>
