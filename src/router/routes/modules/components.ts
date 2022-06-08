@@ -22,6 +22,15 @@ const components: AppRouteRecordRaw = {
         title: 'Input',
         icon: h(Icon, { name: 'input' })
       }
+    },
+    {
+      path: 'detail',
+      name: 'ComponentsDetail',
+      component: () => import('@/docs/Detail/index.md'),
+      meta: {
+        title: 'Detail',
+        icon: h(Icon, { name: 'detail' })
+      }
     }
   ]
 };

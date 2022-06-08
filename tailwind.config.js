@@ -33,7 +33,8 @@ module.exports = {
         error: 'var(--error-color)',
         'error-hover': 'var(--error-color-hover)',
         'error-pressed': 'var(--error-color-pressed)',
-        'error-active': 'var(--error-color-active)'
+        'error-active': 'var(--error-color-active)',
+        tips: '#ccc'
       },
       spacing: {
         mini: '8px',
@@ -65,6 +66,13 @@ module.exports = {
         normal: '16px',
         medium: '20px',
         large: '24px'
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        xxl: '1920px'
       }
     }
   },

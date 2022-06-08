@@ -28,8 +28,8 @@ export function useCharts(option: Ref) {
   }, 200);
 
   onMounted(() => {
-    renderChart(option);
     setTimeout(() => {
+      renderChart(option);
       charts.value?.resize();
     }, 200);
     window.addEventListener('resize', resize);
