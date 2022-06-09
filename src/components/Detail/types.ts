@@ -17,7 +17,7 @@ type BaseConfig = {
 export type DetailConfig =
   (| {
     type: 'component';
-    component: Component;
+    component: Component | string;
     props?: Record<string, any>;
     // eslint-disable-next-line @typescript-eslint/ban-types
     listeners?: Record<string, Function>;

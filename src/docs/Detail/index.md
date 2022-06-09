@@ -1,5 +1,8 @@
 # Detail 详情 
 
+## 使用
+<DemoPreview compName="Detail" demoName="use" />
+
 ## 示例
 
 <DemoPreview compName="Detail" demoName="basic" />
