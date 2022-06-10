@@ -1,5 +1,6 @@
 <script lang="ts" setup name="DashboardWorkbench">
 import { getTest, getTestById } from '@/api/test';
+import { usePreview } from '@/components/Preview';
 import { useRequest } from '@/hooks/useRequest';
 import { ITest } from '@/interface/test';
 
@@ -11,6 +12,9 @@ const { run: queryRun, querise } = useRequest<ITest, [number]>(getTestById, {
   manual: true,
   queryKey: (id) => String(id)
 });
+
+const { open, close } = usePreview();
+
 </script>
 
 <template>
@@ -81,5 +85,9 @@ const { run: queryRun, querise } = useRequest<ITest, [number]>(getTestById, {
       comp-name="Input"
       demo-name="basic"
     />
+
+    <NButton @click="open">
+      打开
+    </NButton>
   </div>
 </template>

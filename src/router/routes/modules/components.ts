@@ -15,20 +15,20 @@ const components: AppRouteRecordRaw = {
   },
   children: [
     {
-      path: 'input',
-      name: 'ComponentsInput',
-      component: () => import('@/docs/Input/index.md'),
-      meta: {
-        title: 'Input',
-        icon: h(Icon, { name: 'input' })
-      }
-    },
-    {
       path: 'detail',
       name: 'ComponentsDetail',
       component: () => import('@/docs/Detail/index.md'),
       meta: {
         title: 'Detail',
+        icon: h(Icon, { name: 'detail' })
+      }
+    },
+    {
+      path: 'preview',
+      name: 'ComponentsPreview',
+      component: () => import('@/docs/Preview/index.md'),
+      meta: {
+        title: 'Preview',
         icon: h(Icon, { name: 'detail' })
       }
     }
