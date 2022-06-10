@@ -2,6 +2,7 @@ import { useAppStore } from '@/store/modules/app';
 import * as echarts from 'echarts';
 import { debounce } from 'lodash-es';
 import { Ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 export function useCharts(option: Ref) {
   const chartEl = ref<HTMLDivElement>();
@@ -23,19 +24,30 @@ export function useCharts(option: Ref) {
   }
 
   const resize = debounce(() => {
-      console.log('chartEl resize');
-      charts.value?.resize();
+    charts.value?.resize();
   }, 200);
 
   onMounted(() => {
+    renderChart(option);
     setTimeout(() => {
-      renderChart(option);
       charts.value?.resize();
     }, 200);
     window.addEventListener('resize', resize);
   });
 
   onUnmounted(() => {
+    window.removeEventListener('resize', resize);
+  });
+
+  onActivated(() => {
+    renderChart(option);
+    setTimeout(() => {
+      charts.value?.resize();
+    }, 200);
+    window.addEventListener('resize', resize);
+  });
+
+  onDeactivated(() => {
     window.removeEventListener('resize', resize);
   });
 
