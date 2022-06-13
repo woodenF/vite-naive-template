@@ -40,14 +40,20 @@ const { active, imgConfig, prev, next, onWheel } = usePreview({ data: props.data
         onselectstart="return false"
         @click.stop.prevent="prev"
       >
-        &#60;
+        <Icon
+          name="prev"
+          size="36"
+        />
       </div>
       <div
         class="absolute right-0 top-0 bottom-0 w-[10%] flex items-center justify-center text-large text-white font-semibold"
         onselectstart="return false"
         @click.stop="next"
       >
-        &#62;
+        <Icon
+          name="next"
+          size="36"
+        />
       </div>
     </div>
   </Transition>
