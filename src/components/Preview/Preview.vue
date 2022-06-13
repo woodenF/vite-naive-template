@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import usePreview from './usePreview';
+import usePreview from './perview';
 
 interface Props {
   onClose?: () => void;

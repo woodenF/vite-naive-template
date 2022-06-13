@@ -1,60 +1,49 @@
-import { isFunction } from 'lodash-es';
+import { createVNode, render, RendererElement, RendererNode, VNode } from 'vue';
+import Preview from './Preview.vue';
 
-interface Options {
+let container: HTMLDivElement | null = null;
+let vm: VNode<RendererNode, RendererElement, { [key: string]: any }> | null = null;
+
+interface Params{
   data: string[];
-  active: number;
-  onShow?: () => void;
+  active?: number;
 }
 
-export default function(options: Options) {
-  const { onShow, data, active: index } = options;
-  const active = ref(index);
-  const imgConfig = ref({
-    scale: 1
-  });
-
-  onMounted(() => {
-    if(isFunction(onShow)) {
-      onShow();
-    }
-  });
-
-  watch(active, () => {
-    imgConfig.value.scale = 1;
-  });
-
-  function prev() {
-    if(active.value > 0) {
-      active.value -= 1;
-    }
+export function usePreview() {
+  function onClose() {
+    (vm?.component?.props as { show: boolean }).show = false;
   }
-
-  function next() {
-    if(active.value < data.length - 1) {
-      active.value += 1;
+  function open(params: Params) {
+    if(container && vm) {
+      return;
     }
-  }
+    container = document.createElement('div');
+    vm = createVNode(
+      Preview,
+      {
+        onClose,
+        afterLeave: () => {
+          if(container) {
+            document.body.removeChild(container);
+              container = null;
+              vm = null;
+          }
+        },
+        onShow: () => {
+          (vm?.component?.props as { show: boolean }).show = true;
+        },
+        show: false,
+        data: params.data,
+        active: params.active || 0
+      }
+    );
 
-  function onWheel(e: any) {
-    const delta = e.wheelDelta;
-    if(delta > 0) {
-      if(imgConfig.value.scale >= 2) {
-        return;
-      }
-      imgConfig.value.scale += 0.1;
-    } else {
-      if(+imgConfig.value.scale.toFixed(1) <= 0.1) {
-        return;
-      }
-      imgConfig.value.scale -= 0.1;
-    }
+    render(vm, container);
+    document.body.appendChild(container);
   }
 
   return {
-    active,
-    prev,
-    next,
-    onWheel,
-    imgConfig
+    open,
+    close: onClose
   };
 }
