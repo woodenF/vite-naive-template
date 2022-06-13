@@ -20,7 +20,7 @@ const components: AppRouteRecordRaw = {
       component: () => import('@/docs/Detail/index.md'),
       meta: {
         title: 'Detail',
-        icon: h(Icon, { name: 'detail' })
+        icon: h(Icon, { name: 'components' })
       }
     },
     {
@@ -29,7 +29,16 @@ const components: AppRouteRecordRaw = {
       component: () => import('@/docs/Preview/index.md'),
       meta: {
         title: 'Preview',
-        icon: h(Icon, { name: 'detail' })
+        icon: h(Icon, { name: 'components' })
+      }
+    },
+    {
+      path: 'cropper',
+      name: 'ComponentsCropper',
+      component: () => import('@/docs/Cropper/index.md'),
+      meta: {
+        title: 'Cropper',
+        icon: h(Icon, { name: 'components' })
       }
     }
   ]

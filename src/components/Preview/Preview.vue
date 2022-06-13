@@ -22,7 +22,7 @@ const { active, imgConfig, prev, next, onWheel } = usePreview({ data: props.data
   >
     <div
       v-if="show"
-      class="bg-black text-red-500 bg-opacity-40 fixed top-0 left-0 right-0 bottom-0 z-[999] flex items-center justify-center"
+      class="bg-black bg-opacity-40 fixed top-0 left-0 right-0 bottom-0 z-[999] flex items-center justify-center"
       @click="onClose"
       @wheel="onWheel"
     >

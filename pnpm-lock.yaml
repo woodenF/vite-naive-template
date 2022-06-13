@@ -13,6 +13,7 @@ specifiers:
   '@vue/runtime-dom': ^3.2.36
   autoprefixer: ^10.4.7
   axios: ^0.27.2
+  cropperjs: ^1.5.12
   echarts: ^5.3.2
   eslint: ^8.15.0
   eslint-config-prettier: ^8.5.0
@@ -47,6 +48,7 @@ specifiers:
 dependencies:
   '@highlightjs/vue-plugin': 2.1.0_tpviz6jpmjvcd76f76tecjrhoq
   axios: 0.27.2
+  cropperjs: 1.5.12
   echarts: 5.3.2
   highlight.js: 11.5.1
   lodash-es: 4.17.21
@@ -1418,6 +1420,10 @@ packages:
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
+
+  /cropperjs/1.5.12:
+    resolution: {integrity: sha512-re7UdjE5UnwdrovyhNzZ6gathI4Rs3KGCBSc8HCIjUo5hO42CtzyblmWLj6QWVw7huHyDMfpKxhiO2II77nhDw==}
+    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
