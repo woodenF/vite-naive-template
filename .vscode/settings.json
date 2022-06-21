@@ -6,5 +6,5 @@
     "strings": true
   },
   // eslint格式化匹配文件
-  "eslint.validate": ["javascript", "vue", "typescript"]
+  "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"]
 }

@@ -40,6 +40,15 @@ const components: AppRouteRecordRaw = {
         title: 'Cropper',
         icon: h(Icon, { name: 'components' })
       }
+    },
+    {
+      path: 'form',
+      name: 'ComponentsForm',
+      component: () => import('@/docs/Form/index.md'),
+      meta: {
+        title: 'Form',
+        icon: h(Icon, { name: 'components' })
+      }
     }
   ]
 };

@@ -9,6 +9,7 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 import { viteMockServe } from 'vite-plugin-mock';
 import Markdown from 'vite-plugin-md';
 import copy from 'rollup-plugin-copy';
+import VueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,6 +18,7 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/]
     }),
+    VueJsx(),
     Markdown(),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svgs')],
@@ -44,7 +46,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
-    }
+    },
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   build: {
     rollupOptions: {
