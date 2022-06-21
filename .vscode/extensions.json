@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "Vue.volar",
-    "dbaeumer.vscode-eslint",
-    "shd101wyy.markdown-preview-enhanced",
-    "editorconfig.editorconfig",
-    "bradlc.vscode-tailwindcss"
-  ]
-}
