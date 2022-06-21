@@ -7,7 +7,8 @@
     "build": "vue-tsc --noEmit && vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
@@ -40,6 +41,7 @@
     "eslint-define-config": "^1.4.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.0.1",
+    "gh-pages": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.4.1",
     "mockjs": "^1.1.0",
