@@ -22,7 +22,7 @@ onMounted(async () => {
       await import(`../../docs/${props.compName}/demo/${props.demoName}.vue?raw`)
     ).default;
   } else {
-    sourceCode.value = await fetch(`/docs/${props.compName}/demo/${props.demoName}.vue`).then((res) => res.text());
+    sourceCode.value = await fetch(`./docs/${props.compName}/demo/${props.demoName}.vue`).then((res) => res.text());
   }
 });
 
