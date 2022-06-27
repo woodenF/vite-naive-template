@@ -14,7 +14,13 @@ import { zhCN, dateZhCN } from 'naive-ui';
         <NDialogProvider>
           <NNotificationProvider>
             <NMessageProvider>
-              <RouterView />
+              <Transition
+                name="fade-slide"
+                mode="out-in"
+                appear
+              >
+                <RouterView />
+              </Transition>
             </NMessageProvider>
           </NNotificationProvider>
         </NDialogProvider>

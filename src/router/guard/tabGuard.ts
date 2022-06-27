@@ -1,6 +1,8 @@
 import { useTabStore } from '@/store/modules/tab';
 import { Router } from 'vue-router';
 
+const whiteList = ['/not-found'];
+
 export function createTabGuard(router: Router) {
   router.beforeEach((to, from, next) => {
     const tabStore = useTabStore();
@@ -11,6 +13,9 @@ export function createTabGuard(router: Router) {
     next();
   });
   router.afterEach((to) => {
+    if(whiteList.includes(to.path)) {
+      return;
+    }
     const tabStore = useTabStore();
     tabStore.addTab(to);
   });
