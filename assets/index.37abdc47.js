@@ -1,0 +1,1 @@
+import{h as s,B as a,I as e,J as l}from"./vue.201ae94a.js";const r={class:"w-full h-[calc(100vh-124px)]"},t=s({name:"index",setup:s=>(s,t)=>(a(),e("div",r,[l("iframe",{class:"w-full h-full",src:"https://vitejs.cn/",frameborder:"0"})]))});export{t as default};

@@ -1,0 +1,1 @@
+import{A as e,B as a,I as o,G as s,J as m}from"./vue.201ae94a.js";const r={class:"markdown-body"},t=m("h1",null,"Form 表单",-1),n={},d={name:"index",setup:(m,{expose:n})=>(n({frontmatter:{}}),(m,n)=>{const d=e("DemoPreview");return a(),o("div",r,[t,s(d,{compName:"Form",demoName:"basic"})])})};export{d as default,n as frontmatter};
