@@ -1,0 +1,1 @@
+import{S as t,o as a,a as r,p as s,b as n}from"./vendore0826c25.js";const c={class:"markdown-body"},m=n("h1",null,"Form \u8868\u5355",-1),l={},f={name:"index",setup(_,{expose:e}){return e({frontmatter:{}}),(d,p)=>{const o=t("DemoPreview");return a(),r("div",c,[m,s(o,{compName:"Form",demoName:"basic"})])}}};export{f as default,l as frontmatter};
