@@ -10,7 +10,6 @@ export function onLogin(): RequestReturn<any> {
         '/dashboard/analysis',
         '/dashboard/workbench'
       ];
-      setTimeout(() => {
         reslove({
           data: {
             data: {
@@ -18,7 +17,6 @@ export function onLogin(): RequestReturn<any> {
             }
           }
         } as any);
-      }, 1000);
     }),
     cancel: null
   };
