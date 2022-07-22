@@ -10,6 +10,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import Markdown from 'vite-plugin-md';
 import copy from 'rollup-plugin-copy';
 import VueJsx from '@vitejs/plugin-vue-jsx';
+import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -41,7 +42,8 @@ export default defineConfig({
       mockPath: 'mock',
       supportTs: true,
       watchFiles: true
-    })
+    }),
+    viteCompression()
   ],
   resolve: {
     alias: {
@@ -50,6 +52,19 @@ export default defineConfig({
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   build: {
+    chunkSizeWarningLimit: 500,
+    minify: 'terser',
+    cssCodeSplit: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log']
+      },
+      output: {
+        comments: true
+      }
+    },
     rollupOptions: {
       plugins: [
         copy({
@@ -58,7 +73,14 @@ export default defineConfig({
             { src: './src/docs', dest: 'dist' }
           ]
         })
-      ]
-    }
+      ],
+      output: {
+        manualChunks: {
+          vue: ['vue', 'vue-router', 'pinia'],
+          echarts: ['echarts']
+        }
+      }
+    },
+    brotliSize: false
   }
 });

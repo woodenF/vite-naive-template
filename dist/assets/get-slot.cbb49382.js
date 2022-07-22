@@ -1,1 +1,1 @@
-function l(s,o="default",n=[]){const t=s.$slots[o];return t===void 0?n:t()}export{l as g};
+function t(t,o="default",n=[]){const s=t.$slots[o];return void 0===s?n:s()}export{t as g};

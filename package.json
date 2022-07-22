@@ -55,6 +55,7 @@
     "unplugin-auto-import": "^0.8.2",
     "unplugin-vue-components": "^0.19.5",
     "vite": "^2.9.9",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-md": "^0.13.1",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-svg-icons": "^2.0.1",
