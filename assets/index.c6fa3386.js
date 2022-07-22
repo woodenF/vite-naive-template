@@ -1,0 +1,1 @@
+import{d as s,o as c,c as t,b as a}from"./index.fe60ce87.js";const o={class:"w-full h-[calc(100vh-124px)]"},p=s({name:"index",setup(r){const e="https://vitejs.cn/";return(n,l)=>(c(),t("div",o,[a("iframe",{class:"w-full h-full",src:e,frameborder:"0"})]))}});export{p as default};

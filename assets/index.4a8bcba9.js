@@ -1,0 +1,1 @@
+import{d as s,o as a,c,b as o}from"./index.fe60ce87.js";const t={class:"w-full h-[calc(100vh-124px)]"},i=s({name:"index",setup(r){const e="https://www.naiveui.com/";return(n,l)=>(a(),c("div",t,[o("iframe",{class:"w-full h-full",src:e,frameborder:"0"})]))}});export{i as default};
