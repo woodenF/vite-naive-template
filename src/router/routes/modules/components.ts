@@ -49,6 +49,15 @@ const components: AppRouteRecordRaw = {
         title: 'Form',
         icon: h(Icon, { name: 'components' })
       }
+    },
+    {
+      path: 'request',
+      name: 'ComponentsRequest',
+      component: () => import('@/docs/Request/index.md'),
+      meta: {
+        title: 'Request',
+        icon: h(Icon, { name: 'components' })
+      }
     }
   ]
 };
