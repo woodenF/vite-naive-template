@@ -18,7 +18,7 @@ const route = useRoute();
     <div class="h-header flex items-center justify-center font-bold text-medium text-primary whitespace-nowrap overflow-hidden">
       {{ appStore.collapsed ? 'N' : 'Naive Template' }}
     </div>
-    <div class="flex-1 overflow-auto">
+    <NScrollbar class="flex-1 overflow-auto">
       <NMenu
         :value="(route.name as string)"
         :collapsed="appStore.collapsed"
@@ -29,6 +29,6 @@ const route = useRoute();
         :render-label="(route: any) => renderMenuLabel(route)"
         :render-icon="(route: any) => renderIcon(route)"
       />
-    </div>
+    </NScrollbar>
   </div>
 </template>
