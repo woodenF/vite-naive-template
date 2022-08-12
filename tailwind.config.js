@@ -34,6 +34,7 @@ module.exports = {
         'error-hover': 'var(--error-color-hover)',
         'error-pressed': 'var(--error-color-pressed)',
         'error-active': 'var(--error-color-active)',
+        close: 'var(--close-color)',
         tips: '#ccc'
       },
       spacing: {

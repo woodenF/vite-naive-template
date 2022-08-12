@@ -58,6 +58,15 @@ const components: AppRouteRecordRaw = {
         title: 'Request',
         icon: h(Icon, { name: 'components' })
       }
+    },
+    {
+      path: 'theme',
+      name: 'ComponentsTheme',
+      component: () => import('@/docs/Theme/index.md'),
+      meta: {
+        title: 'Theme',
+        icon: h(Icon, { name: 'components' })
+      }
     }
   ]
 };

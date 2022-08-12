@@ -49,6 +49,7 @@ const { bool: isHover, setBool } = useBoolean(false);
       <Icon
         name="tab_close"
         size="12"
+        class="text-close"
       />
     </div>
   </div>
