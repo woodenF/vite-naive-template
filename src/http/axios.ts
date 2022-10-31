@@ -1,4 +1,4 @@
-import { RequestReturn } from '@/types/http';
+import { AppAxiosResponse } from '@/types/http';
 import axios, { AxiosRequestConfig, Canceler } from 'axios';
 
 const instance = axios.create({
@@ -11,15 +11,14 @@ const instance = axios.create({
  * @param config
  * @returns
  */
-export function request<T = any>(config: AxiosRequestConfig): RequestReturn<T> {
+export function request<T = any>(config: AxiosRequestConfig): Promise<AppAxiosResponse<T>> {
   const cancel = ref<Canceler>();
-  return {
-    instance: instance({
-      ...config,
-      cancelToken: new axios.CancelToken((c) => {
-        cancel.value = c;
-      })
-    }),
-    cancel
-  };
+  const request = instance({
+    ...config,
+    cancelToken: new axios.CancelToken((c) => {
+      cancel.value = c;
+    })
+  });
+  request.cancel = cancel;
+  return request;
 }

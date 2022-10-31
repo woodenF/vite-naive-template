@@ -36,8 +36,8 @@ export function useRequest<T, P extends any[] = any[]>(
 
     querise[key].loading = true;
 
-    const { instance, cancel } = service(...args);
-    querise[key].cancel = cancel;
+    const instance = service(...args);
+    querise[key].cancel = instance.cancel;
 
     instance
       .then((res) => {

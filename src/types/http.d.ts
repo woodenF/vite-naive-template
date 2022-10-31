@@ -9,21 +9,13 @@ export interface Response<T> {
 
 export type AppAxiosResponse<T = any> = AxiosResponse<Response<T>>;
 
-/**
- * 为了满足 useRequest，这里对 request 返回的类型做了改变
- */
-export interface RequestReturn<T> {
-  instance: Promise<AppAxiosResponse<T>>;
-  cancel: Ref<Canceler | undefined>;
-}
-
 export interface HttpError<T = any> {
   status: number | string;
   data: T;
   mag: string;
 }
 
-export type Service<T, P extends any[]> = (...args: P) => RequestReturn<T>;
+export type Service<T, P extends any[]> = (...args: P) => Promise<AppAxiosResponse<T>>;
 
 export interface Options<T, P extends any[]> {
   // 是否手动发起请求
@@ -54,4 +46,10 @@ export interface Result<T = any> {
   loading?: boolean;
   cancel?: Canceler;
   err?: HttpError;
+}
+
+declare global {
+  interface Promise{
+    cancel: any;
+  }
 }

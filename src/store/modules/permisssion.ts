@@ -14,7 +14,7 @@ export const usePermissionStore = defineStore('permission', () => {
   });
 
   async function generateRoutes() {
-    const { data: { data: { permList = [] } = {} } } = await onLogin().instance;
+    const { data: { data: { permList = [] } = {} } } = await onLogin();
     store.authRoutes = filterAsyncRoutes(asyncRoutes, permList);
   }
 
